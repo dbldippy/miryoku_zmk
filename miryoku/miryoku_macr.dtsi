@@ -1,0 +1,61 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+
+#define MACR_WAIT_MS 7
+#define MACR_TAP_MS MACR_WAIT_MS
+
+#define MACR_BINDING(BINDING) \
+    BINDING, \
+    <&macro_press MIRYOKU_MACR_DEACT_LAYER> \
+    ;
+
+#define MACRO_X \
+bindings = \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
+    <&kp M &kp P &kp T &kp Y>
+U_MACRO(u_macr_m, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
+#undef MACRO_X
+
+#define MACRO_X \
+bindings = \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
+    <&kp M &kp P &kp T &kp Y>
+U_MACRO(u_macr_p, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
+#undef MACRO_X
+
+#define MACRO_X \
+bindings = \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
+    <&kp M &kp P &kp T &kp Y>
+U_MACRO(u_macr_s, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
+#undef MACRO_X
+
+#define MACRO_X \
+bindings = \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
+    <&kp M &kp P &kp T &kp Y>
+U_MACRO(u_macr_u, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
+#undef MACRO_X
+
+#undef MACR_WAIT_MS
+#undef MACR_TAP_MS
+
+
+#define MIRYOKU_MACR_COMBO_TERM 100
+
+#define MIRYOKU_MACR_COMBO_MACRO(KEYS, BINDING) \
+macr_combo_ ## KEYS { \
+  layers = <U_BASE>; \
+  key-positions = <KEYS>; \
+  bindings = <BINDING>; \
+  timeout-ms = <MIRYOKU_MACR_COMBO_TERM>; \
+};
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+    MIRYOKU_MACR_COMBO_MACRO(MIRYOKU_MACR_ACTIVATION_COMBO, MIRYOKU_MACR_ACT_LAYER)
+  };
+};
+
+#undef MACRO_X
