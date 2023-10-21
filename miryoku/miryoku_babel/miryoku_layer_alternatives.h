@@ -385,3 +385,10 @@ U_UND,             U_CUT,             U_CPY,             U_PST,             U_RD
 &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NU,              U_NU,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 U_NP,              U_NP,              U_BTN3,            U_BTN1,            U_BTN2,            U_BTN2,            U_BTN1,            U_BTN3,            U_NP,              U_NP
+
+
+#define MIRYOKU_ALTERNATIVES_MACR \
+U_NP,              U_NP,              U_NP,              U_MACR_P,          U_NP,              U_NP,              U_NP,              U_MACR_U,          U_NP,              U_NP,              \
+U_NP,              U_NP,              U_MACR_S,          U_NP,              U_NP,              U_MACR_M,          U_NP,              U_NP,              U_NP,              U_NP,              \
+U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              \
+U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP
