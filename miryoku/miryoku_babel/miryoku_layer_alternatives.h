@@ -388,7 +388,7 @@ U_NP,              U_NP,              U_BTN3,            U_BTN1,            U_BT
 
 
 #define MIRYOKU_ALTERNATIVES_MACR \
-U_NP,              U_NP,              U_NP,              U_MACR_P,          U_NP,              U_NP,              U_NP,              U_MACR_U,          U_NP,              U_NP,              \
+U_NP,              U_NP,              U_NP,              U_MACR_P,          U_MACR_B,          U_NP,              U_NP,              U_MACR_U,          U_NP,              U_NP,              \
 U_NP,              U_NP,              U_MACR_S,          U_NP,              U_NP,              U_MACR_M,          U_NP,              U_NP,              U_NP,              U_NP,              \
 U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              \
 U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP,              U_NP

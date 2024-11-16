@@ -11,29 +11,42 @@
 
 #define MACRO_X \
 bindings = \
-    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
-    <&kp M &kp P &kp T &kp Y>
+    <&macro_tap &kp H &kp W &kp N &kp DOT &kp V &kp P &kp M &kp N8 &kp U &kp Z &kp N &kp N0 &kp K &kp B &kp Y &kp N6>, \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp W &kp T &kp W>, <&macro_release &kp LSHFT>
+U_MACRO(u_macr_b, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
+#undef MACRO_X
+
+#define MACRO_X \
+bindings = \
+    <&macro_tap &kp N &kp I &kp J &kp F &kp A &kp M &kp KP_MINUS &kp G &kp U &kp J &kp F &kp O &kp Q &kp KP_MINUS &kp KP_N3 &kp D>, \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp U>, <&macro_release &kp LSHFT>, \
+    <&macro_tap &kp Q &kp R &kp I>
 U_MACRO(u_macr_m, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
 #undef MACRO_X
 
 #define MACRO_X \
 bindings = \
-    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
-    <&kp M &kp P &kp T &kp Y>
+    <&macro_tap &kp H &kp I &kp N &kp C &kp E &kp H &kp MINUS &kp X &kp I &kp W &kp R &kp U &kp R &kp KP_MINUS>, \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp F>, <&macro_release &kp LSHFT>, \
+    <&macro_tap &kp I &kp K &kp Z &kp I &kp N2>
 U_MACRO(u_macr_p, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
 #undef MACRO_X
 
 #define MACRO_X \
 bindings = \
-    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
-    <&kp M &kp P &kp T &kp Y>
+    <&macro_press &kp LSHFT>, <&macro_tap &kp L &kp C>, <&macro_release &kp LSHFT>, \
+    <&macro_tap &kp N8>, <&macro_press &kp LSHFT>, <&macro_tap &kp N>, <&macro_release &kp LSHFT>, <&macro_tap &kp MINUS>, \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp W &kp B>, <&macro_release &kp LSHFT>, <&macro_tap &kp RPAR>, \
+    <&macro_press &kp LSHFT>, <&macro_tap &kp X>, <&macro_release &kp LSHFT>, \
+    <&macro_tap &kp N1>, <&macro_press &kp LSHFT>, <&macro_tap &kp S &kp X &kp J>, <&macro_release &kp LSHFT>, \
+    <&macro_tap &kp P &kp W>
 U_MACRO(u_macr_s, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
 #undef MACRO_X
 
 #define MACRO_X \
 bindings = \
-    <&macro_press &kp LSHFT>, <&macro_tap &kp E>, <&macro_release &kp LSHFT>, \
-    <&kp M &kp P &kp T &kp Y>
+    <&macro_tap &kp M &kp I &kp K &kp E &kp DOT &kp V &kp E &kp L &kp D &kp I &kp N &kp K &kp AT>, \
+    <&macro_tap &kp Y &kp O &kp U &kp V &kp E &kp R &kp S &kp I &kp O &kp N &kp DOT &kp C &kp O &kp M>
 U_MACRO(u_macr_u, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING(MACRO_X))
 #undef MACRO_X
 
@@ -41,10 +54,10 @@ U_MACRO(u_macr_u, wait-ms = <MACR_WAIT_MS>; tap-ms = <MACR_TAP_MS>; MACR_BINDING
 #undef MACR_TAP_MS
 
 
-#define MIRYOKU_MACR_COMBO_TERM 100
+#define MIRYOKU_MACR_COMBO_TERM 120
 
-#define MIRYOKU_MACR_COMBO_MACRO(KEYS, BINDING) \
-macr_combo_ ## KEYS { \
+#define MIRYOKU_MACR_COMBO_MACRO(ID, KEYS, BINDING) \
+macr_combo_ ## ID { \
   layers = <U_BASE>; \
   key-positions = <KEYS>; \
   bindings = <BINDING>; \
@@ -54,7 +67,7 @@ macr_combo_ ## KEYS { \
 / {
   combos {
     compatible = "zmk,combos";
-    MIRYOKU_MACR_COMBO_MACRO(MIRYOKU_MACR_ACTIVATION_COMBO, MIRYOKU_MACR_ACT_LAYER)
+    MIRYOKU_MACR_COMBO_MACRO(macro, MIRYOKU_MACR_ACTIVATION_COMBO, MIRYOKU_MACR_ACT_LAYER)
   };
 };
 
