@@ -30,6 +30,9 @@ With this, the development workflow is as follows:
 In the ZMK dev container:
 
 ```
+git pull
+// rebuild and restart dev container
+west update
 cd app
 for d in left right; do \
   west build -d build/$d -p -b nice_nano_v2 -- \
@@ -51,4 +54,4 @@ done
 With the left and right crkbd side: 
 2. Connect the side via USB
 3. Put the side in boot mode by pressing reset twice quicky. The side should be mounted as external drive 'NICENANO'
-4. Drag zmk-{left|right}.uf2 onto the drive
+4. Drag zmk-{left|right}.uf2 onto the drive; File I/O errors can be ignored
